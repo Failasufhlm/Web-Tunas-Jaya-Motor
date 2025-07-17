@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Email - Tunas Jaya Motor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #e02b20;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            background-color: #e02b20;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #c0251a;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test Email Functionality</h1>
+        
+        <div class="info" style="display: block;">
+            <strong>Panduan Testing:</strong><br>
+            1. Isi form di bawah dengan data test<br>
+            2. Klik "Test Email" untuk mengirim email<br>
+            3. Cek email admin dan customer<br>
+            4. Cek file email_log.txt untuk log
+        </div>
+
+        <form id="testForm">
+            <div class="form-group">
+                <label for="name">Nama Test:</label>
+                <input type="text" id="name" name="nama" value="Test User" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Test:</label>
+                <input type="email" id="email" name="email" value="test@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Telepon:</label>
+                <input type="tel" id="phone" name="telepon" value="08123456789">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subjek:</label>
+                <select id="subject" name="subjek" required>
+                    <option value="test">Test Email</option>
+                    <option value="penjualan">Konsultasi Penjualan</option>
+                    <option value="sparepart">Pesanan Sparepart</option>
+                    <option value="service">Booking Service</option>
+                    <option value="asuransi">Konsultasi Asuransi</option>
+                    <option value="kredit">Pengajuan Kredit</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Pesan Test:</label>
+                <textarea id="message" name="pesan" required>Ini adalah pesan test untuk memverifikasi fungsi email website Tunas Jaya Motor. Jika Anda menerima email ini, berarti sistem email berfungsi dengan baik.</textarea>
+            </div>
+
+            <button type="submit" id="submitBtn">📧 Test Email</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const resultDiv = document.getElementById('result');
+            
+            // Show loading state
+            submitBtn.textContent = 'Mengirim...';
+            submitBtn.disabled = true;
+            resultDiv.style.display = 'none';
+            
+            // Get form data
+            const formData = new FormData(this);
+            const emailData = {
+                form_type: 'test',
+                name: formData.get('nama'),
+                email: formData.get('email'),
+                phone: formData.get('telepon'),
+                subject: formData.get('subjek'),
+                message: formData.get('pesan')
+            };
+            
+            try {
+                // Test both email files
+                const files = ['send-email.php', 'send-email-smtp.php'];
+                let success = false;
+                let errorMessage = '';
+                
+                for (const file of files) {
+                    try {
+                        const response = await fetch(file, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(emailData)
+                        });
+                        
+                        const result = await response.json();
+                        
+                        if (result.success) {
+                            success = true;
+                            resultDiv.className = 'result success';
+                            resultDiv.innerHTML = `
+                                <strong>✅ Email berhasil dikirim!</strong><br>
+                                File: ${file}<br>
+                                Pesan: ${result.message}<br>
+                                <br>
+                                <strong>Yang perlu dicek:</strong><br>
+                                1. Email admin (info@tunasjayamotor.com)<br>
+                                2. Email customer (${emailData.email})<br>
+                                3. File email_log.txt untuk log
+                            `;
+                            break;
+                        } else {
+                            errorMessage = result.message;
+                        }
+                    } catch (error) {
+                        console.error(`Error with ${file}:`, error);
+                        errorMessage = `Error dengan ${file}: ${error.message}`;
+                    }
+                }
+                
+                if (!success) {
+                    resultDiv.className = 'result error';
+                    resultDiv.innerHTML = `
+                        <strong>❌ Email gagal dikirim</strong><br>
+                        Error: ${errorMessage}<br>
+                        <br>
+                        <strong>Troubleshooting:</strong><br>
+                        1. Pastikan server mendukung PHP<br>
+                        2. Cek fungsi mail() tersedia<br>
+                        3. Konfigurasi email server<br>
+                        4. Cek file permissions
+                    `;
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = `
+                    <strong>❌ Terjadi kesalahan</strong><br>
+                    Error: ${error.message}<br>
+                    <br>
+                    <strong>Kemungkinan penyebab:</strong><br>
+                    1. Server tidak mendukung fetch API<br>
+                    2. File PHP tidak dapat diakses<br>
+                    3. CORS policy blocking request
+                `;
+            } finally {
+                resultDiv.style.display = 'block';
+                submitBtn.textContent = '📧 Test Email';
+                submitBtn.disabled = false;
+            }
+        });
+        
+        // Auto-fill with test data
+        document.getElementById('name').addEventListener('focus', function() {
+            if (this.value === '') {
+                this.value = 'Test User';
+            }
+        });
+        
+        document.getElementById('email').addEventListener('focus', function() {
+            if (this.value === '') {
+                this.value = 'test@example.com';
+            }
+        });
+    </script>
+</body>
+</html> 

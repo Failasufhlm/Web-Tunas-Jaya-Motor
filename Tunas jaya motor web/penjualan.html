@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Penjualan Unit Baru Honda - Tunas Jaya Motor dealer resmi Honda dengan motor berkualitas dan harga terbaik" />
+    <meta name="keywords" content="motor honda baru, dealer honda, tunas jaya motor, penjualan motor" />
+    <meta name="author" content="Tunas Jaya Motor" />
+    <title>Penjualan Unit Baru - Tunas Jaya Motor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8492beff-a942-402d-82a1-7d2dc35eed15.png"
+            alt="Logo Tunas Jaya Motor dengan warna merah dan putih"
+            onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fc8b9432-a91b-4267-baa1-6a875c845b99.png'"
+          />
+          <div class="logo-text">
+            <h1>TUNAS JAYA MOTOR</h1>
+            <span>Dealer Resmi Honda</span>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="index.html#products">Produk</a></li>
+            <li><a href="index.html#testimonials">Testimoni</a></li>
+            <li><a href="index.html#contact">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h2>Penjualan Unit Baru Honda</h2>
+      <p>
+        Dapatkan motor Honda terbaru dengan kualitas terjamin dan harga terbaik
+        dari dealer resmi Honda terpercaya
+      </p>
+      <a href="#products" class="btn">Lihat Unit Tersedia</a>
+    </section>
+
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-title">
+          <h2>Unit Baru Tersedia</h2>
+          <p>
+            Pilihan lengkap motor Honda terbaru dengan garansi resmi dan
+            layanan purna jual terbaik
+          </p>
+        </div>
+
+        <div class="filter-container">
+          <div class="filter-group">
+            <label for="type">Tipe</label>
+            <select id="type" onchange="filterProducts()">
+              <option value="all">Semua Tipe</option>
+              <option value="bebek">Bebek</option>
+              <option value="sport">Sport</option>
+              <option value="matic">Matic</option>
+              <option value="cb">CB</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="price">Harga</label>
+            <select id="price" onchange="filterProducts()">
+              <option value="all">Semua Harga</option>
+              <option value="1">≤ Rp 20 Juta</option>
+              <option value="2">Rp 20-25 Juta</option>
+              <option value="3">≥ Rp 25 Juta</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="cc">CC</label>
+            <select id="cc" onchange="filterProducts()">
+              <option value="all">Semua CC</option>
+              <option value="110">110cc</option>
+              <option value="125">125cc</option>
+              <option value="150">150cc</option>
+              <option value="160">160cc</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="products-grid" id="productsContainer">
+          <!-- Products will be loaded here by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="section-title">
+          <h2>Keunggulan Unit Baru</h2>
+          <p>Mengapa memilih unit baru dari Tunas Jaya Motor?</p>
+        </div>
+        
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">🛡️</div>
+            <h3>Garansi Resmi</h3>
+            <p>Garansi resmi Honda dengan coverage lengkap untuk mesin, transmisi, dan komponen utama</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="benefit-icon">🔧</div>
+            <h3>Service Gratis</h3>
+            <p>Free service pertama dan diskon untuk service berkala selanjutnya</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="benefit-icon">📋</div>
+            <h3>Dokumen Lengkap</h3>
+            <p>STNK, BPKB, dan dokumen kendaraan lainnya dijamin aman dan lengkap</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="benefit-icon">🎁</div>
+            <h3>Bonus Menarik</h3>
+            <p>Berbagai bonus seperti helm, jaket, atau aksesoris motor lainnya</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Hubungi Kami</h2>
+          <p>
+            Konsultasi gratis untuk pemilihan motor yang tepat sesuai kebutuhan Anda
+          </p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Informasi Penjualan</h3>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i>📞</i>
+                <div>
+                  <h4>Sales Hotline</h4>
+                  <p><a href="tel:+622112345678" class="email-link">(021) 1234-5678</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i>✉️</i>
+                <div>
+                  <h4>Email</h4>
+                  <p><a href="mailto:sales@tunasjayamotor.com" class="email-link">sales@tunasjayamotor.com</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i>📍</i>
+                <div>
+                  <h4>Showroom</h4>
+                  <p>Jl. Raya Ciputat No. 123, Tangerang Selatan, Banten</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i>⏱️</i>
+                <div>
+                  <h4>Jam Operasional</h4>
+                  <p>Senin-Sabtu: 08.00-17.00 WIB</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3>Konsultasi Gratis</h3>
+            <form id="consultationForm">
+              <input type="text" name="nama" placeholder="Nama Lengkap" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <input type="tel" name="telepon" placeholder="Nomor Telepon" required />
+              <select name="subjek" required>
+                <option value="" disabled selected>Pilih Motor yang Diminati</option>
+                <option value="beat">Honda Beat</option>
+                <option value="vario">Honda Vario</option>
+                <option value="scoopy">Honda Scoopy</option>
+                <option value="cbr">Honda CBR150R</option>
+                <option value="cb">Honda CB150R</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
+              <textarea name="pesan" placeholder="Pesan atau pertanyaan Anda" required></textarea>
+              <button type="submit" class="btn">Kirim Konsultasi</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>Tentang Kami</h3>
+          <p>
+            Tunas Jaya Motor adalah dealer resmi Honda yang telah beroperasi
+            sejak 2005 dengan reputasi pelayanan terbaik dan harga kompetitif.
+          </p>
+          <div class="social-links">
+            <a href="#" title="Facebook Tunas Jaya Motor">FB</a>
+            <a href="#" title="Instagram Tunas Jaya Motor">IG</a>
+            <a href="#" title="YouTube Tunas Jaya Motor">YT</a>
+            <a href="#" title="WhatsApp Tunas Jaya Motor">WA</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Layanan</h3>
+          <ul>
+            <li><a href="penjualan.html">Penjualan Unit Baru</a></li>
+            <li><a href="sparepart.html">Sparepart Original</a></li>
+            <li><a href="service.html">Service Berkala</a></li>
+            <li><a href="asuransi.html">Asuransi Kendaraan</a></li>
+            <li><a href="kredit.html">Kredit Motor</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Produk</h3>
+          <ul>
+            <li><a href="index.html#products">Honda Beat</a></li>
+            <li><a href="index.html#products">Honda Vario</a></li>
+            <li><a href="index.html#products">Honda Scoopy</a></li>
+            <li><a href="index.html#products">Honda CBR150R</a></li>
+            <li><a href="index.html#products">Honda CB150R</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Kontak</h3>
+          <p>
+            <strong>Alamat:</strong> Jl. Raya Ciputat No. 123, Tangerang Selatan
+          </p>
+          <p><strong>Telepon:</strong> <a href="tel:+622112345678" class="email-link">(021) 1234-5678</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@tunasjayamotor.com" class="email-link">info@tunasjayamotor.com</a></p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>© 2023 Tunas Jaya Motor. Semua Hak Dilindungi.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html> 

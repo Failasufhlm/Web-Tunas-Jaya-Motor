@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tunas Jaya Motor - Dealer Resmi Honda dengan motor berkualitas dan harga terbaik di Tangerang Selatan" />
+    <meta name="keywords" content="motor honda, dealer honda, tunas jaya motor, motor matic, motor sport" />
+    <meta name="author" content="Tunas Jaya Motor" />
+    <title>Tunas Jaya Motor - Dealer Resmi Honda</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8492beff-a942-402d-82a1-7d2dc35eed15.png"
+            alt="Logo Tunas Jaya Motor dengan warna merah dan putih"
+            onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fc8b9432-a91b-4267-baa1-6a875c845b99.png'"
+          />
+          <div class="logo-text">
+            <h1>TUNAS JAYA MOTOR</h1>
+            <span>Dealer Resmi Honda</span>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#products">Produk</a></li>
+            <li><a href="#testimonials">Testimoni</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <h2>Motor Honda Kualitas Terbaik</h2>
+      <p>
+        Temukan motor Honda terbaru dengan harga terbaik dan promo menarik hanya
+        di Tunas Jaya Motor - dealer resmi Honda terpercaya.
+      </p>
+      <a href="#products" class="btn">Lihat Produk</a>
+    </section>
+
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-title">
+          <h2>Produk Kami</h2>
+          <p>
+            Temukan berbagai pilihan motor Honda terbaru dengan kualitas terbaik
+            dan harga kompetitif
+          </p>
+        </div>
+
+        <div class="filter-container">
+          <div class="filter-group">
+            <label for="type">Tipe</label>
+            <select id="type" onchange="filterProducts()">
+              <option value="all">Semua Tipe</option>
+              <option value="bebek">Bebek</option>
+              <option value="sport">Sport</option>
+              <option value="matic">Matic</option>
+              <option value="cb">CB</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="price">Harga</label>
+            <select id="price" onchange="filterProducts()">
+              <option value="all">Semua Harga</option>
+              <option value="1">≤ Rp 20 Juta</option>
+              <option value="2">Rp 20-25 Juta</option>
+              <option value="3">≥ Rp 25 Juta</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="cc">CC</label>
+            <select id="cc" onchange="filterProducts()">
+              <option value="all">Semua CC</option>
+              <option value="110">110cc</option>
+              <option value="125">125cc</option>
+              <option value="150">150cc</option>
+              <option value="160">160cc</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="products-grid" id="productsContainer">
+          <!-- Products will be loaded here by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <h2>Apa Kata Pelanggan</h2>
+          <p>
+            Testimoni jujur dari para pelanggan yang telah membeli motor di
+            Tunas Jaya Motor
+          </p>
+        </div>
+
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                Sangat puas dengan pelayanan di Tunas Jaya Motor. Prosesnya
+                cepat dan harga bersaing. Motor Honda Beat yang saya beli
+                benar-benar baru dan kualitasnya terjaga.
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/37939ae7-83b2-4f3f-8c61-6d39a8584893.png"
+                alt="Potret Bapak paruh baya tersenyum dengan background blur"
+                onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e0a77e14-7261-41d2-ad99-93468887b371.png/333/fff?text=User'"
+              />
+              <div class="author-info">
+                <h4>Budi Santoso</h4>
+                <p>Owner Honda Beat</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                Setelah survey ke beberapa dealer, akhirnya memutuskan beli
+                CBR150R di Tunas Jaya Motor. Pelayanannya ramah dan transparan.
+                Sangat recommended!
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d25c7cf0-f75d-4c7a-8726-d97e5acfc650.png"
+                alt="Wanita muda menggunakan helm motor dengan ekspresi senang"
+                onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f24c6f8b-03d0-4cdf-bf52-cc7bdfc180b4.png'"
+              />
+              <div class="author-info">
+                <h4>Dewi Lestari</h4>
+                <p>Owner CBR150R</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                Beli motor Honda Vario 160 di sini dapat banyak bonus menarik.
+                Mekaniknya juga profesional dalam melakukan PDI. Mantap
+                pokoknya!
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eae7d581-8dad-4729-b57e-31b47bf90586.png"
+                alt="Pria muda menggunakan kemeja kantor dengan senyum lebar"
+                onerror="this.src='https://placehold.co/100x100/333/fff?text=User'"
+              />
+              <div class="author-info">
+                <h4>Rizky Pratama</h4>
+                <p>Owner Vario 160</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Hubungi Kami</h2>
+          <p>
+            Kami siap membantu Anda menemukan motor Honda yang tepat untuk
+            kebutuhan Anda
+          </p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Tunas Jaya Motor</h3>
+
+            <div class="contact-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8191264745624!3d-6.194741693787892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f49f6c3c3b3d%3A0x7e4a1b3e3b3e3b3d!2sTunas%20Jaya%20Motor!5e0!3m2!1sen!2sid!4v1620000000000!5m2!1sen!2sid"
+                allowfullscreen=""
+                loading="lazy"
+                title="Lokasi Tunas Jaya Motor"
+              ></iframe>
+            </div>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <i>📍</i>
+                <div>
+                  <h4>Alamat</h4>
+                  <p>Jl. Raya Ciputat No. 123, Tangerang Selatan, Banten</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i>✉️</i>
+                <div>
+                  <h4>Email</h4>
+                  <p><a href="mailto:info@tunasjayamotor.com" class="email-link">info@tunasjayamotor.com</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i>📞</i>
+                <div>
+                  <h4>Telepon</h4>
+                  <p><a href="tel:+622112345678" class="email-link">(021) 1234-5678</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i>⏱️</i>
+                <div>
+                  <h4>Jam Operasional</h4>
+                  <p>Senin-Sabtu: 08.00-17.00 WIB</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3>Kirim Pesan</h3>
+            <form id="messageForm">
+              <input type="text" name="nama" placeholder="Nama Lengkap" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <input type="tel" name="telepon" placeholder="Nomor Telepon" />
+              <select name="subjek" required>
+                <option value="" disabled selected>Pilih Subjek</option>
+                <option value="pertanyaan">Pertanyaan Produk</option>
+                <option value="booking">Booking Service</option>
+                <option value="testride">Test Ride</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
+              <textarea name="pesan" placeholder="Pesan Anda" required></textarea>
+              <button type="submit" class="btn">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>Tentang Kami</h3>
+          <p>
+            Tunas Jaya Motor adalah dealer resmi Honda yang telah beroperasi
+            sejak 2005 dengan reputasi pelayanan terbaik dan harga kompetitif.
+          </p>
+          <div class="social-links">
+            <a href="#" title="Facebook Tunas Jaya Motor">FB</a>
+            <a href="#" title="Instagram Tunas Jaya Motor">IG</a>
+            <a href="#" title="YouTube Tunas Jaya Motor">YT</a>
+            <a href="#" title="WhatsApp Tunas Jaya Motor">WA</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Produk</h3>
+          <ul>
+            <li><a href="#products">Honda Beat</a></li>
+            <li><a href="#products">Honda Vario</a></li>
+            <li><a href="#products">Honda Scoopy</a></li>
+            <li><a href="#products">Honda CBR150R</a></li>
+            <li><a href="#products">Honda CB150R</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Layanan</h3>
+          <ul>
+            <li><a href="penjualan.html">Penjualan Unit Baru</a></li>
+            <li><a href="sparepart.html">Sparepart Original</a></li>
+            <li><a href="service.html">Service Berkala</a></li>
+            <li><a href="asuransi.html">Asuransi Kendaraan</a></li>
+            <li><a href="kredit.html">Kredit Motor</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Kontak</h3>
+          <p>
+            <strong>Alamat:</strong> Jl. Raya Ciputat No. 123, Tangerang Selatan
+          </p>
+          <p><strong>Telepon:</strong> <a href="tel:+622112345678" class="email-link">(021) 1234-5678</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@tunasjayamotor.com" class="email-link">info@tunasjayamotor.com</a></p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>© 2023 Tunas Jaya Motor. Semua Hak Dilindungi.</p>
+      </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modalTitle">Detail Produk</h3>
+          <button class="close-btn" onclick="closeModal()">×</button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Modal content will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Product Data
+      const products = [
+        {
+          id: 1,
+          name: "Honda BeAT CBS",
+          type: "matic",
+          price: 18000000,
+          priceText: "Rp 18.000.000",
+          cc: 110,
+          image:
+            "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9a5f53e8-e58e-492d-9bc9-42fa0d3ea6cf.png",
+          alt: "Honda BeAT warna merah dengan desain sporty dan modern",
+          specs: {
+            mesin: "110cc eSP",
+            transmisi: "Otomatis",
+            bahan_bakar: "Bensin",
+            sistem_pengapian: "PGM-FI",
+          },
+          promo: "Gratis Helm Standar",
+        },
+        {
+          id: 2,
+          name: "Honda Vario 160",
+          type: "matic",
+          price: 26000000,
+          priceText: "Rp 26.000.000",
+          cc: 160,
+          image:
+            "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2475951b-3f8a-40d1-b2a3-40d783cbdfee.png",
+          alt: "Honda Vario 160 warna hitam doff dengan aksen merah",
+          specs: {
+            mesin: "160cc eSP+",
+            transmisi: "Otomatis",
+            bahan_bakar: "Bensin",
+            sistem_pengapian: "PGM-FI",
+          },
+          promo: "DP Ringan 1,5 Juta",
+        },
+        {
+          id: 3,
+          name: "Honda CBR150R",
+          type: "sport",
+          price: 35000000,
+          priceText: "Rp 35.000.000",
+          cc: 150,
+          image:
+            "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f6b7b2e2-36bb-45e1-bc02-2108cbbfa185.png",
+          alt: "Honda CBR150R warna merah bergaris dengan desang sportbike tajam",
+          specs: {
+            mesin: "150cc DOHC",
+            transmisi: "6 Speed",
+            bahan_bakar: "Bensin",
+            sistem_pengapian: "PGM-FI",
+          },
+          promo: "Cashback Rp 1 Juta",
+        },
+        {
+          id: 4,
+          name: "Honda Scoopy",
+          type: "matic",
+          price: 22000000,
+          priceText: "Rp 22.000.000",
+          cc: 110,
+          image:
+            "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b5787660-b2e8-4546-aaa1-a017e7a8192d.png",
+          alt: "Honda Scoopy warna putih pastel dengan aksen vintage",
+          specs: {
+            mesin: "110cc eSP",
+            transmisi: "Otomatis",
+            bahan_bakar: "Bensin",
+            sistem_pengapian: "PGM-FI",
+          },
+          promo: "Gratis Box Depan",
+        },
+        {
+          id: 5,
+          name: "Honda CB150R",
+          type: "cb",
+          price: 32000000,
+          priceText: "Rp 32.000.000",
+          cc: 150,
+          image:
+            "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/69b5cc66-26d0-4ea3-abad-77ed4544b479.png",
+          alt: "Honda CB150R warna hitam dengan desain cafe racer modern",
+          specs: {
+            mesin: "150cc DOHC",
+            transmisi: "6 Speed",
+            bahan_bakar: "Bensin",
+            sistem_pengapian: "PGM-FI",
+          },
+          promo: "Potongan DP 500rb",
+        },
+        {
+          id: 6,
+          name: "Honda Genio",
+          type: "matic",
+          price: 19000000,
+          priceText: "Rp 19.000.000",
+          cc: 110,
+          image:
+            "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/86ce0992-6a76-4d05-9604-b05a2f9a9fb5.png",
+          alt: "Honda Genio warna biru muda dengan desain minimalis dan stylish",
+          specs: {
+            mesin: "110cc eSP",
+            transmisi: "Otomatis",
+            bahan_bakar: "Bensin",
+            sistem_pengapian: "PGM-FI",
+          },
+          promo: "Free Servis Pertama",
+        },
+      ];
+
+      // Initialize the page
+      document.addEventListener("DOMContentLoaded", function () {
+        loadProducts(products);
+
+        // Form submission
+        document
+          .getElementById("messageForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert(
+              "Terima kasih, pesan Anda telah terkirim. Kami akan segera menghubungi Anda."
+            );
+            this.reset();
+          });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+          });
+      });
+
+      // Load products to the page
+      function loadProducts(productsToLoad) {
+        const container = document.getElementById("productsContainer");
+        container.innerHTML = "";
+
+        productsToLoad.forEach((product) => {
+          const productEl = document.createElement("div");
+          productEl.className = "product-card";
+          productEl.innerHTML = `
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${
+            product.alt
+          }" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/447cd35b-a094-46f0-b77f-667c3955eaeb.png'">
+                    </div>
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <div class="price">${product.priceText}</div>
+                        <div class="specs">
+                            <div class="spec-item">
+                                <span>Tipe</span>
+                                <span>${getTypeName(product.type)}</span>
+                            </div>
+                            <div class="spec-item">
+                                <span>Mesin</span>
+                                <span>${product.specs.mesin}</span>
+                            </div>
+                            <div class="spec-item">
+                                <span>Transmisi</span>
+                                <span>${product.specs.transmisi}</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn" onclick="openModal(${
+                              product.id
+                            })">Detail</button>
+                            <button class="btn btn-secondary" onclick="testRide(${
+                              product.id
+                            })">Test Ride</button>
+                        </div>
+                    </div>
+                `;
+          container.appendChild(productEl);
+        });
+      }
+
+      // Filter products
+      function filterProducts() {
+        const type = document.getElementById("type").value;
+        const price = document.getElementById("price").value;
+        const cc = document.getElementById("cc").value;
+
+        let filtered = products;
+
+        if (type !== "all") {
+          filtered = filtered.filter((p) => p.type === type);
+        }
+
+        if (price !== "all") {
+          if (price === "1") {
+            filtered = filtered.filter((p) => p.price <= 20000000);
+          } else if (price === "2") {
+            filtered = filtered.filter(
+              (p) => p.price > 20000000 && p.price <= 25000000
+            );
+          } else if (price === "3") {
+            filtered = filtered.filter((p) => p.price > 25000000);
+          }
+        }
+
+        if (cc !== "all") {
+          filtered = filtered.filter((p) => p.cc == cc);
+        }
+
+        loadProducts(filtered);
+      }
+
+      // Get type name
+      function getTypeName(type) {
+        switch (type) {
+          case "bebek":
+            return "Bebek";
+          case "sport":
+            return "Sport";
+          case "matic":
+            return "Matic";
+          case "cb":
+            return "CB";
+          default:
+            return type;
+        }
+      }
+
+      // Open product modal
+      function openModal(productId) {
+        const product = products.find((p) => p.id === productId);
+        if (!product) return;
+
+        document.getElementById("modalTitle").textContent = product.name;
+
+        const modalBody = document.getElementById("modalBody");
+        modalBody.innerHTML = `
+                <div class="product-modal">
+                    <div class="product-modal-image">
+                        <img src="${product.image}" alt="${
+          product.alt
+        }" onerror="this.src='https://placehold.co/600x400/F8F9FA/333?text=Motor+Honda'">
+                    </div>
+                    <div class="product-modal-info">
+                        <h2>${product.name}</h2>
+                        <div class="product-modal-price">${
+                          product.priceText
+                        }</div>
+                        
+                        <div class="promo-badge">
+                            <p><strong>Promo:</strong> ${product.promo}</p>
+                        </div>
+                        
+                        <div class="product-modal-specs">
+                            ${Object.entries(product.specs)
+                              .map(
+                                ([key, value]) => `
+                                <div class="spec-row">
+                                    <span class="spec-label">${key
+                                      .replace("_", " ")
+                                      .toUpperCase()}</span>
+                                    <span class="spec-value">${value}</span>
+                                </div>
+                            `
+                              )
+                              .join("")}
+                        </div>
+                        
+                        <div class="product-modal-actions">
+                            <button class="btn" onclick="checkStock(${
+                              product.id
+                            })">Cek Stok</button>
+                            <button class="btn btn-secondary" onclick="testRide(${
+                              product.id
+                            })">Jadwalkan Test Ride</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+        document.getElementById("productModal").style.display = "block";
+      }
+
+      // Close modal
+      function closeModal() {
+        document.getElementById("productModal").style.display = "none";
+      }
+
+      // Test ride function
+      function testRide(productId) {
+        const product = products.find((p) => p.id === productId);
+        alert(
+          `Anda telah menjadwalkan test ride untuk ${product.name}. Sales kami akan segera menghubungi Anda.`
+        );
+        closeModal();
+      }
+
+      // Check stock function
+      function checkStock(productId) {
+        const product = products.find((p) => p.id === productId);
+        alert(
+          `Stok ${product.name} saat ini tersedia. Silakan datang ke showroom kami untuk melihat unit.`
+        );
+      }
+
+      // Close modal when clicking outside
+      window.onclick = function (event) {
+        const modal = document.getElementById("productModal");
+        if (event.target == modal) {
+          closeModal();
+        }
+      };
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>

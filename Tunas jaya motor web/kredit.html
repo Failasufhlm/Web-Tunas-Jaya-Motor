@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kredit Motor Honda - Tunas Jaya Motor menyediakan layanan kredit motor dengan syarat mudah dan bunga ringan" />
+    <meta name="keywords" content="kredit motor, cicilan motor, kredit honda, tunas jaya motor" />
+    <meta name="author" content="Tunas Jaya Motor" />
+    <title>Kredit Motor - Tunas Jaya Motor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8492beff-a942-402d-82a1-7d2dc35eed15.png"
+            alt="Logo Tunas Jaya Motor dengan warna merah dan putih"
+            onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fc8b9432-a91b-4267-baa1-6a875c845b99.png'"
+          />
+          <div class="logo-text">
+            <h1>TUNAS JAYA MOTOR</h1>
+            <span>Dealer Resmi Honda</span>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="index.html#products">Produk</a></li>
+            <li><a href="index.html#testimonials">Testimoni</a></li>
+            <li><a href="index.html#contact">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h2>Kredit Motor Honda</h2>
+      <p>
+        Realisasikan impian memiliki motor Honda dengan kredit yang mudah,
+        syarat ringan, dan bunga terjangkau
+      </p>
+      <a href="#calculator" class="btn">Hitung Kredit</a>
+    </section>
+
+    <section class="calculator" id="calculator">
+      <div class="container">
+        <div class="section-title">
+          <h2>Simulasi Kredit</h2>
+          <p>
+            Hitung cicilan motor Honda yang Anda inginkan dengan kalkulator kredit kami
+          </p>
+        </div>
+
+        <div class="calculator-container">
+          <div class="calculator-form">
+            <h3>Hitung Cicilan</h3>
+            <form id="creditCalculator">
+              <div class="form-group">
+                <label for="motorType">Pilih Motor</label>
+                <select id="motorType" required>
+                  <option value="" disabled selected>Pilih Motor Honda</option>
+                  <option value="beat">Honda Beat - Rp 18.000.000</option>
+                  <option value="vario">Honda Vario 160 - Rp 26.000.000</option>
+                  <option value="scoopy">Honda Scoopy - Rp 22.000.000</option>
+                  <option value="cbr">Honda CBR150R - Rp 35.000.000</option>
+                  <option value="cb">Honda CB150R - Rp 32.000.000</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="dpAmount">Uang Muka (DP)</label>
+                <select id="dpAmount" required>
+                  <option value="" disabled selected>Pilih Jumlah DP</option>
+                  <option value="0.1">10% dari harga motor</option>
+                  <option value="0.2">20% dari harga motor</option>
+                  <option value="0.3">30% dari harga motor</option>
+                  <option value="0.4">40% dari harga motor</option>
+                  <option value="0.5">50% dari harga motor</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="tenure">Jangka Waktu</label>
+                <select id="tenure" required>
+                  <option value="" disabled selected>Pilih Jangka Waktu</option>
+                  <option value="12">12 Bulan</option>
+                  <option value="18">18 Bulan</option>
+                  <option value="24">24 Bulan</option>
+                  <option value="36">36 Bulan</option>
+                  <option value="48">48 Bulan</option>
+                </select>
+              </div>
+              
+              <button type="submit" class="btn">Hitung Cicilan</button>
+            </form>
+          </div>
+
+          <div class="calculator-result" id="calculatorResult">
+            <h3>Hasil Perhitungan</h3>
+            <div class="result-content">
+              <p>Silakan pilih motor dan isi form di sebelah kiri untuk melihat hasil perhitungan kredit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="requirements">
+      <div class="container">
+        <div class="section-title">
+          <h2>Syarat Kredit</h2>
+          <p>
+            Syarat mudah untuk pengajuan kredit motor Honda
+          </p>
+        </div>
+
+        <div class="requirements-grid">
+          <div class="requirement-card">
+            <div class="requirement-icon">📋</div>
+            <h3>Dokumen Pribadi</h3>
+            <ul>
+              <li>KTP Suami & Istri</li>
+              <li>Kartu Keluarga</li>
+              <li>NPWP (jika ada)</li>
+              <li>Surat Nikah (jika menikah)</li>
+            </ul>
+          </div>
+
+          <div class="requirement-card">
+            <div class="requirement-icon">💼</div>
+            <h3>Dokumen Kerja</h3>
+            <ul>
+              <li>Slip Gaji 3 Bulan Terakhir</li>
+              <li>SK Kerja / SIUP</li>
+              <li>Rekening Koran 3 Bulan</li>
+              <li>Surat Referensi Bank</li>
+            </ul>
+          </div>
+
+          <div class="requirement-card">
+            <div class="requirement-icon">🏠</div>
+            <h3>Dokumen Tempat Tinggal</h3>
+            <ul>
+              <li>Surat Keterangan Domisili</li>
+              <li>Bukti Sewa / Sertifikat Rumah</li>
+              <li>Rekening Listrik / Air</li>
+              <li>Foto Rumah (depan & dalam)</li>
+            </ul>
+          </div>
+
+          <div class="requirement-card">
+            <div class="requirement-icon">💰</div>
+            <h3>Dokumen Finansial</h3>
+            <ul>
+              <li>Minimal Penghasilan Rp 3.000.000</li>
+              <li>Usia Minimal 21 Tahun</li>
+              <li>Maksimal Usia 60 Tahun</li>
+              <li>Minimal DP 10%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="section-title">
+          <h2>Keunggulan Kredit Kami</h2>
+          <p>Mengapa memilih kredit di Tunas Jaya Motor?</p>
+        </div>
+        
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">📋</div>
+            <h3>Syarat Mudah</h3>
+            <p>Proses pengajuan kredit dengan syarat yang mudah dan fleksibel</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="benefit-icon">💰</div>
+            <h3>Bunga Ringan</h3>
+            <p>Bunga kredit yang kompetitif dan terjangkau untuk semua kalangan</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="benefit-icon">⚡</div>
+            <h3>Proses Cepat</h3>
+            <p>Proses approval kredit yang cepat, maksimal 3 hari kerja</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="benefit-icon">🎁</div>
+            <h3>Bonus Menarik</h3>
+            <p>Berbagai bonus dan promo menarik untuk nasabah kredit</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Hubungi Kami</h2>
+          <p>
+            Konsultasi kredit dan pengajuan dengan tim financing kami
+          </p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Informasi Kredit</h3>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i>📞</i>
+                <div>
+                  <h4>Financing Hotline</h4>
+                  <p><a href="tel:+622112345682" class="email-link">(021) 1234-5682</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i>✉️</i>
+                <div>
+                  <h4>Email</h4>
+                  <p><a href="mailto:kredit@tunasjayamotor.com" class="email-link">kredit@tunasjayamotor.com</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i>📍</i>
+                <div>
+                  <h4>Kantor</h4>
+                  <p>Jl. Raya Ciputat No. 123, Tangerang Selatan, Banten</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i>⏱️</i>
+                <div>
+                  <h4>Jam Operasional</h4>
+                  <p>Senin-Sabtu: 08.00-17.00 WIB</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3>Pengajuan Kredit</h3>
+            <form id="creditForm">
+              <input type="text" name="nama" placeholder="Nama Lengkap" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <input type="tel" name="telepon" placeholder="Nomor Telepon" required />
+              <select name="subjek" required>
+                <option value="" disabled selected>Pilih Motor yang Diminati</option>
+                <option value="beat">Honda Beat</option>
+                <option value="vario">Honda Vario 160</option>
+                <option value="scoopy">Honda Scoopy</option>
+                <option value="cbr">Honda CBR150R</option>
+                <option value="cb">Honda CB150R</option>
+              </select>
+              <input type="number" name="penghasilan" placeholder="Penghasilan per Bulan" required />
+              <textarea name="pesan" placeholder="Pertanyaan atau informasi tambahan" required></textarea>
+              <button type="submit" class="btn">Ajukan Kredit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>Tentang Kami</h3>
+          <p>
+            Tunas Jaya Motor adalah dealer resmi Honda yang telah beroperasi
+            sejak 2005 dengan reputasi pelayanan terbaik dan harga kompetitif.
+          </p>
+          <div class="social-links">
+            <a href="#" title="Facebook Tunas Jaya Motor">FB</a>
+            <a href="#" title="Instagram Tunas Jaya Motor">IG</a>
+            <a href="#" title="YouTube Tunas Jaya Motor">YT</a>
+            <a href="#" title="WhatsApp Tunas Jaya Motor">WA</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Layanan</h3>
+          <ul>
+            <li><a href="penjualan.html">Penjualan Unit Baru</a></li>
+            <li><a href="sparepart.html">Sparepart Original</a></li>
+            <li><a href="service.html">Service Berkala</a></li>
+            <li><a href="asuransi.html">Asuransi Kendaraan</a></li>
+            <li><a href="kredit.html">Kredit Motor</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Produk</h3>
+          <ul>
+            <li><a href="index.html#products">Honda Beat</a></li>
+            <li><a href="index.html#products">Honda Vario</a></li>
+            <li><a href="index.html#products">Honda Scoopy</a></li>
+            <li><a href="index.html#products">Honda CBR150R</a></li>
+            <li><a href="index.html#products">Honda CB150R</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Kontak</h3>
+          <p>
+            <strong>Alamat:</strong> Jl. Raya Ciputat No. 123, Tangerang Selatan
+          </p>
+          <p><strong>Telepon:</strong> <a href="tel:+622112345678" class="email-link">(021) 1234-5678</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@tunasjayamotor.com" class="email-link">info@tunasjayamotor.com</a></p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>© 2023 Tunas Jaya Motor. Semua Hak Dilindungi.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html> 
